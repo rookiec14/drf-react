@@ -19,6 +19,8 @@ module.exports = {
     
     plugins: [
         //tells webpack where to store data about your bundles.
+        // explanation : webpack-bundle-tracker will create or rewrite a file named webpack-stats.json, that will
+        //     contain the name and path (among other info) of all bundles created by webpack
         new BundleTracker({filename: './webpack-stats.json'}), 
         //makes jQuery available in every module
         new webpack.ProvidePlugin({ 
